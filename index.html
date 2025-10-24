@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programação: Construindo Meu Futuro</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #1e1e1e;
+      color: #f0f0f0;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background-color: #2c2c2c;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+
+    h1, h2 {
+      color: #dcdcdc;
+    }
+
+    main {
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    section {
+      background-color: #2b2b2b;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    section:hover {
+      transform: scale(1.01);
+      background-color: #303030;
+    }
+
+    code {
+      background-color: #3a3a3a;
+      color: #e2e2e2;
+      padding: 10px;
+      display: block;
+      border-radius: 6px;
+      font-family: Consolas, monospace;
+      margin-top: 10px;
+      white-space: pre-wrap;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #2c2c2c;
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    .linguagem {
+      font-weight: bold;
+      color: #bdbdbd;
+    }
+
+    .highlight {
+      color: #a0a0a0;
+    }
+
+    /* Botões neutros */
+    button {
+      background-color: #444;
+      color: #f5f5f5;
+      border: 1px solid #666;
+      border-radius: 6px;
+      padding: 8px 14px;
+      margin-top: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #555;
+      transform: scale(1.05);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    nav {
+      background-color: #262626;
+      padding: 10px 0;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+
+    nav a {
+      color: #f0f0f0;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #bbb;
+    }
+
+    #motivacao {
+      font-style: italic;
+      color: #ccc;
+      display: none;
+      margin-top: 15px;
+      transition: all 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Programação: Construindo Meu Futuro</h1>
+    <p>Como aprender a programar pode transformar minha vida e abrir oportunidades</p>
+  </header>
+
+  <nav>
+    <a href="#intro">O que é</a>
+    <a href="#linguagens">Linguagens</a>
+    <a href="#motivo">Por que aprender</a>
+  </nav>
+
+  <main>
+    <section id="intro">
+      <h2>O que é Programação?</h2>
+      <p>
+        Programação é o processo de criar instruções para que um computador execute tarefas.
+        Usando linguagens específicas, podemos desenvolver sites, aplicativos, jogos e muito mais.
+        É como ensinar o computador a "pensar" e realizar ações.
+      </p>
+      <button onclick="toggleSection('maisIntro')">Saiba mais</button>
+      <div id="maisIntro" class="hidden">
+        <p>
+          Tudo o que usamos no dia a dia — redes sociais, jogos, calculadoras, e até carros inteligentes —
+          existe graças à programação. Ela combina lógica, criatividade e tecnologia para resolver problemas.
+        </p>
+      </div>
+    </section>
+
+    <section id="linguagens">
+      <h2>Principais Linguagens de Programação</h2>
+      <p>
+        Existem diversas linguagens de programação, cada uma com seu propósito. 
+        Abaixo estão algumas das mais conhecidas:
+      </p>
+
+      <h3 class="linguagem">HTML — Estrutura de Sites</h3>
+      <p>Usado para montar a base de páginas da web.</p>
+      <button onclick="toggleSection('htmlExemplo')">Mostrar exemplo</button>
+      <div id="htmlExemplo" class="hidden">
+        <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Meu primeiro site&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Olá, mundo!&lt;/h1&gt;
+    &lt;p&gt;Este é o corpo da página.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+        </code>
+      </div>
+
+      <h3 class="linguagem">Python — Simples e Poderoso</h3>
+      <p>Usado para automação, sites, jogos e inteligência artificial.</p>
+      <button onclick="toggleSection('pythonExemplo')">Mostrar exemplo</button>
+      <div id="pythonExemplo" class="hidden">
+        <code>
+# Exemplo em Python
+print("Olá, mundo!")
+nome = input("Qual é o seu nome? ")
+print("Seja bem-vindo,", nome)
+        </code>
+      </div>
+
+      <h3 class="linguagem">Java — Aplicações e Sistemas</h3>
+      <p>Usado em aplicativos Android, sistemas empresariais e grandes projetos.</p>
+      <button onclick="toggleSection('javaExemplo')">Mostrar exemplo</button>
+      <div id="javaExemplo" class="hidden">
+        <code>
+public class Main {
+  public static void main(String[] args) {
+    System.out.println("Olá, mundo!");
+  }
+}
+        </code>
+      </div>
+    </section>
+
+    <section id="motivo">
+      <h2>Por que aprender Programação?</h2>
+      <p>
+        Aprender programação desenvolve lógica, criatividade e resolução de problemas.
+        É uma habilidade essencial para o futuro e pode abrir muitas oportunidades.
+      </p>
+      <ul>
+        <li>Desenvolve o raciocínio lógico</li>
+        <li>Aumenta as chances de uma boa carreira</li>
+        <li>Permite criar soluções e inovações</li>
+      </ul>
+      <button onclick="mostrarMotivacao()">Como isso ajuda no meu projeto de vida?</button>
+      <p id="motivacao">
+        Aprender programação pode ser o primeiro passo para construir uma carreira na tecnologia — uma das áreas que mais cresce no mundo.
+        Com dedicação, é possível transformar curiosidade em profissão e criar ferramentas que impactam a vida das pessoas.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Site criado por João Vitor — Projeto de Vida © 2025</p>
+  </footer>
+
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.classList.toggle("hidden");
+    }
+
+    function mostrarMotivacao() {
+      const motiv = document.getElementById("motivacao");
+      motiv.style.display = motiv.style.display === "block" ? "none" : "block";
+    }
+  </script>
+</body>
+</html>
