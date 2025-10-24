@@ -3,140 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Programação: Construindo Meu Futuro</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #1e1e1e;
-      color: #f0f0f0;
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
-
-    header {
-      background-color: #2c2c2c;
-      color: white;
-      padding: 30px 20px;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-    }
-
-    h1, h2 {
-      color: #dcdcdc;
-    }
-
-    main {
-      padding: 30px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section {
-      background-color: #2b2b2b;
-      padding: 20px;
-      margin-bottom: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
-      transition: all 0.3s ease;
-    }
-
-    section:hover {
-      transform: scale(1.01);
-      background-color: #303030;
-    }
-
-    code {
-      background-color: #3a3a3a;
-      color: #e2e2e2;
-      padding: 10px;
-      display: block;
-      border-radius: 6px;
-      font-family: Consolas, monospace;
-      margin-top: 10px;
-      white-space: pre-wrap;
-    }
-
-    footer {
-      text-align: center;
-      padding: 15px;
-      background-color: #2c2c2c;
-      color: #aaa;
-      font-size: 14px;
-    }
-
-    .linguagem {
-      font-weight: bold;
-      color: #bdbdbd;
-    }
-
-    .highlight {
-      color: #a0a0a0;
-    }
-
-    /* Botões neutros */
-    button {
-      background-color: #444;
-      color: #f5f5f5;
-      border: 1px solid #666;
-      border-radius: 6px;
-      padding: 8px 14px;
-      margin-top: 10px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    button:hover {
-      background-color: #555;
-      transform: scale(1.05);
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    nav {
-      background-color: #262626;
-      padding: 10px 0;
-      text-align: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-    }
-
-    nav a {
-      color: #f0f0f0;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    nav a:hover {
-      color: #bbb;
-    }
-
-    #motivacao {
-      font-style: italic;
-      color: #ccc;
-      display: none;
-      margin-top: 15px;
-      transition: all 0.5s ease;
-    }
-  </style>
+  <title>Programação</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Programação: Construindo Meu Futuro</h1>
-    <p>Como aprender a programar pode transformar minha vida e abrir oportunidades</p>
+    <h1>Programação</h1>
+    <p>Como aprender a programar pode transformar vidas e abrir oportunidades</p>
   </header>
 
   <nav>
     <a href="#intro">O que é</a>
     <a href="#linguagens">Linguagens</a>
+    <a href="#areas">Áreas</a>
     <a href="#motivo">Por que aprender</a>
   </nav>
 
@@ -208,6 +87,68 @@ public class Main {
       </div>
     </section>
 
+    <!-- Nova Seção: Áreas da Programação -->
+    <section id="areas">
+      <h2>Áreas da Programação</h2>
+      <p>
+        A programação é uma área muito ampla e cheia de possibilidades. 
+        Cada ramo tem suas próprias ferramentas e linguagens mais usadas.
+      </p>
+
+      <h3 class="linguagem">Desenvolvimento Web</h3>
+      <p>Criação de sites, sistemas e aplicativos para a internet.</p>
+      <button onclick="toggleSection('webArea')">Saiba mais</button>
+      <div id="webArea" class="hidden">
+        <p>
+          Essa área é dividida em:
+          <ul>
+            <li><strong>Front-end:</strong> parte visual e interativa do site (HTML, CSS, JavaScript).</li>
+            <li><strong>Back-end:</strong> lógica, banco de dados e servidores (Node.js, Python, PHP, Java).</li>
+            <li><strong>Full-stack:</strong> desenvolvedor que domina tanto o front quanto o back.</li>
+          </ul>
+        </p>
+      </div>
+
+      <h3 class="linguagem">Inteligência Artificial</h3>
+      <p>Usa programação para ensinar máquinas a aprender e tomar decisões.</p>
+      <button onclick="toggleSection('iaArea')">Saiba mais</button>
+      <div id="iaArea" class="hidden">
+        <p>
+          Utiliza linguagens como <strong>Python</strong> e bibliotecas como <strong>TensorFlow</strong> e <strong>PyTorch</strong>.
+          É usada em reconhecimento facial, assistentes virtuais, carros autônomos e muito mais.
+        </p>
+      </div>
+
+      <h3 class="linguagem">Desenvolvimento de Jogos</h3>
+      <p>Criação de jogos 2D, 3D e mobile usando motores gráficos.</p>
+      <button onclick="toggleSection('gamesArea')">Saiba mais</button>
+      <div id="gamesArea" class="hidden">
+        <p>
+          Motores como <strong>Unity</strong> (C#) e <strong>Godot</strong> (GDScript) são muito usados.  
+          Além da parte técnica, envolve design, arte e som.
+        </p>
+      </div>
+
+      <h3 class="linguagem">Desenvolvimento Mobile</h3>
+      <p>Criação de aplicativos para celulares Android e iOS.</p>
+      <button onclick="toggleSection('mobileArea')">Saiba mais</button>
+      <div id="mobileArea" class="hidden">
+        <p>
+          Utiliza linguagens como <strong>Kotlin</strong> (Android), <strong>Swift</strong> (iOS) e frameworks como <strong>Flutter</strong> e <strong>React Native</strong>.
+        </p>
+      </div>
+
+      <h3 class="linguagem">Ciência de Dados</h3>
+      <p>Análise de grandes quantidades de informações para descobrir padrões e previsões.</p>
+      <button onclick="toggleSection('dadosArea')">Saiba mais</button>
+      <div id="dadosArea" class="hidden">
+        <p>
+          Usa linguagens como <strong>Python</strong> e <strong>R</strong>, além de ferramentas como Pandas e Power BI.
+          Muito usada por empresas para tomar decisões baseadas em dados.
+        </p>
+      </div>
+    </section>
+
     <section id="motivo">
       <h2>Por que aprender Programação?</h2>
       <p>
@@ -231,16 +172,6 @@ public class Main {
     <p>Site criado por João Vitor — Projeto de Vida © 2025</p>
   </footer>
 
-  <script>
-    function toggleSection(id) {
-      const section = document.getElementById(id);
-      section.classList.toggle("hidden");
-    }
-
-    function mostrarMotivacao() {
-      const motiv = document.getElementById("motivacao");
-      motiv.style.display = motiv.style.display === "block" ? "none" : "block";
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
