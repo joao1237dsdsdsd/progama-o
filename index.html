@@ -8,16 +8,11 @@
 </head>
 <body>
   <header>
-    <h1>Programação</h1>
+    <h1 id="titulo"></h1>
     <p>Como aprender a programar pode transformar vidas e abrir oportunidades</p>
   </header>
 
-  <nav>
-    <a href="#intro">O que é</a>
-    <a href="#linguagens">Linguagens</a>
-    <a href="#areas">Áreas</a>
-    <a href="#motivo">Por que aprender</a>
-  </nav>
+  <button id="temaBtn">🌙 Alternar Tema</button>
 
   <main>
     <section id="intro">
@@ -27,13 +22,10 @@
         Usando linguagens específicas, podemos desenvolver sites, aplicativos, jogos e muito mais.
         É como ensinar o computador a "pensar" e realizar ações.
       </p>
-      <button onclick="toggleSection('maisIntro')">Saiba mais</button>
-      <div id="maisIntro" class="hidden">
-        <p>
-          Tudo o que usamos no dia a dia — redes sociais, jogos, calculadoras, e até carros inteligentes —
-          existe graças à programação. Ela combina lógica, criatividade e tecnologia para resolver problemas.
-        </p>
-      </div>
+      <p>
+        Tudo o que usamos no dia a dia — redes sociais, jogos, calculadoras, e até carros inteligentes —
+        existe graças à programação. Ela combina lógica, criatividade e tecnologia para resolver problemas.
+      </p>
     </section>
 
     <section id="linguagens">
@@ -45,9 +37,7 @@
 
       <h3 class="linguagem">HTML — Estrutura de Sites</h3>
       <p>Usado para montar a base de páginas da web.</p>
-      <button onclick="toggleSection('htmlExemplo')">Mostrar exemplo</button>
-      <div id="htmlExemplo" class="hidden">
-        <code>
+      <code>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
@@ -58,36 +48,28 @@
     &lt;p&gt;Este é o corpo da página.&lt;/p&gt;
   &lt;/body&gt;
 &lt;/html&gt;
-        </code>
-      </div>
+      </code>
 
       <h3 class="linguagem">Python — Simples e Poderoso</h3>
       <p>Usado para automação, sites, jogos e inteligência artificial.</p>
-      <button onclick="toggleSection('pythonExemplo')">Mostrar exemplo</button>
-      <div id="pythonExemplo" class="hidden">
-        <code>
+      <code>
 # Exemplo em Python
 print("Olá, mundo!")
 nome = input("Qual é o seu nome? ")
 print("Seja bem-vindo,", nome)
-        </code>
-      </div>
+      </code>
 
       <h3 class="linguagem">Java — Aplicações e Sistemas</h3>
       <p>Usado em aplicativos Android, sistemas empresariais e grandes projetos.</p>
-      <button onclick="toggleSection('javaExemplo')">Mostrar exemplo</button>
-      <div id="javaExemplo" class="hidden">
-        <code>
+      <code>
 public class Main {
   public static void main(String[] args) {
     System.out.println("Olá, mundo!");
   }
 }
-        </code>
-      </div>
+      </code>
     </section>
 
-    <!-- Nova Seção: Áreas da Programação -->
     <section id="areas">
       <h2>Áreas da Programação</h2>
       <p>
@@ -96,57 +78,42 @@ public class Main {
       </p>
 
       <h3 class="linguagem">Desenvolvimento Web</h3>
-      <p>Criação de sites, sistemas e aplicativos para a internet.</p>
-      <button onclick="toggleSection('webArea')">Saiba mais</button>
-      <div id="webArea" class="hidden">
-        <p>
-          Essa área é dividida em:
-          <ul>
-            <li><strong>Front-end:</strong> parte visual e interativa do site (HTML, CSS, JavaScript).</li>
-            <li><strong>Back-end:</strong> lógica, banco de dados e servidores (Node.js, Python, PHP, Java).</li>
-            <li><strong>Full-stack:</strong> desenvolvedor que domina tanto o front quanto o back.</li>
-          </ul>
-        </p>
-      </div>
+      <p>
+        Criação de sites, sistemas e aplicativos para a internet.
+        Essa área é dividida em:
+      </p>
+      <ul>
+        <li><strong>Front-end:</strong> parte visual e interativa do site (HTML, CSS, JavaScript).</li>
+        <li><strong>Back-end:</strong> lógica, banco de dados e servidores (Node.js, Python, PHP, Java).</li>
+        <li><strong>Full-stack:</strong> desenvolvedor que domina tanto o front quanto o back.</li>
+      </ul>
 
       <h3 class="linguagem">Inteligência Artificial</h3>
-      <p>Usa programação para ensinar máquinas a aprender e tomar decisões.</p>
-      <button onclick="toggleSection('iaArea')">Saiba mais</button>
-      <div id="iaArea" class="hidden">
-        <p>
-          Utiliza linguagens como <strong>Python</strong> e bibliotecas como <strong>TensorFlow</strong> e <strong>PyTorch</strong>.
-          É usada em reconhecimento facial, assistentes virtuais, carros autônomos e muito mais.
-        </p>
-      </div>
+      <p>
+        Usa programação para ensinar máquinas a aprender e tomar decisões.
+        Utiliza linguagens como <strong>Python</strong> e bibliotecas como <strong>TensorFlow</strong> e <strong>PyTorch</strong>.
+        É usada em reconhecimento facial, assistentes virtuais, carros autônomos e muito mais.
+      </p>
 
       <h3 class="linguagem">Desenvolvimento de Jogos</h3>
-      <p>Criação de jogos 2D, 3D e mobile usando motores gráficos.</p>
-      <button onclick="toggleSection('gamesArea')">Saiba mais</button>
-      <div id="gamesArea" class="hidden">
-        <p>
-          Motores como <strong>Unity</strong> (C#) e <strong>Godot</strong> (GDScript) são muito usados.  
-          Além da parte técnica, envolve design, arte e som.
-        </p>
-      </div>
+      <p>
+        Criação de jogos 2D, 3D e mobile usando motores gráficos.
+        Motores como <strong>Unity</strong> (C#) e <strong>Godot</strong> (GDScript) são muito usados.  
+        Além da parte técnica, envolve design, arte e som.
+      </p>
 
       <h3 class="linguagem">Desenvolvimento Mobile</h3>
-      <p>Criação de aplicativos para celulares Android e iOS.</p>
-      <button onclick="toggleSection('mobileArea')">Saiba mais</button>
-      <div id="mobileArea" class="hidden">
-        <p>
-          Utiliza linguagens como <strong>Kotlin</strong> (Android), <strong>Swift</strong> (iOS) e frameworks como <strong>Flutter</strong> e <strong>React Native</strong>.
-        </p>
-      </div>
+      <p>
+        Criação de aplicativos para celulares Android e iOS.
+        Utiliza linguagens como <strong>Kotlin</strong> (Android), <strong>Swift</strong> (iOS) e frameworks como <strong>Flutter</strong> e <strong>React Native</strong>.
+      </p>
 
       <h3 class="linguagem">Ciência de Dados</h3>
-      <p>Análise de grandes quantidades de informações para descobrir padrões e previsões.</p>
-      <button onclick="toggleSection('dadosArea')">Saiba mais</button>
-      <div id="dadosArea" class="hidden">
-        <p>
-          Usa linguagens como <strong>Python</strong> e <strong>R</strong>, além de ferramentas como Pandas e Power BI.
-          Muito usada por empresas para tomar decisões baseadas em dados.
-        </p>
-      </div>
+      <p>
+        Análise de grandes quantidades de informações para descobrir padrões e previsões.
+        Usa linguagens como <strong>Python</strong> e <strong>R</strong>, além de ferramentas como Pandas e Power BI.
+        Muito usada por empresas para tomar decisões baseadas em dados.
+      </p>
     </section>
 
     <section id="motivo">
@@ -160,8 +127,7 @@ public class Main {
         <li>Aumenta as chances de uma boa carreira</li>
         <li>Permite criar soluções e inovações</li>
       </ul>
-      <button onclick="mostrarMotivacao()">Como isso ajuda no meu projeto de vida?</button>
-      <p id="motivacao">
+      <p>
         Aprender programação pode ser o primeiro passo para construir uma carreira na tecnologia — uma das áreas que mais cresce no mundo.
         Com dedicação, é possível transformar curiosidade em profissão e criar ferramentas que impactam a vida das pessoas.
       </p>
